@@ -1,0 +1,38 @@
+:root {
+    /* твої основні кольори */
+    --background: #fff2df;
+    --background-secondary: #3b4149;
+    --foreground: #171717;
+
+
+    --primary-color: #fbebc4;
+    --secondary-color: #c95a38;
+    --main-text-color: #2b3a3e;
+
+    /* додаткові акценти */
+    --accent-pink: #f8c6b5;
+    --accent-blue: #435b71;
+    --accent-green: #557c6a;
+    --white: #ffffff;
+
+    --font-noto: 'Noto Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+html,
+body {
+    max-width: 100vw;
+    background: var(--background);
+    font-family: var(--font-noto);
+    color: var(--main-text-color);
+}

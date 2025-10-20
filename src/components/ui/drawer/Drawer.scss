@@ -1,0 +1,110 @@
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 300px;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--background) 0%, #fff 50%, var(--primary-color) 100%);
+  color: var(--foreground);
+  box-shadow: -8px 20px 60px rgba(0, 0, 0, 0.15);
+  border-radius: 0 18px 18px 0;
+  z-index: 1200;
+  transition: right 0.35s cubic-bezier(0.2, 0.9, 0.2, 1), opacity 0.35s;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  backdrop-filter: blur(6px);
+
+  &.open {
+    right: 0;
+    opacity: 1;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__close {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--accent-color);
+    transition: transform 0.18s ease, color 0.18s ease;
+
+    &:hover {
+      transform: rotate(10deg) scale(1.03);
+      color: var(--secondary-color);
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  &__nav-list {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__nav-item {
+    width: 100%;
+  }
+
+  &__nav-link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--foreground);
+    font-size: 1.05rem;
+    padding: 10px 12px;
+    width: 100%;
+    border-radius: 10px;
+    transition: color 0.25s ease, background 0.2s ease, transform 0.18s ease;
+
+    &:hover {
+      color: var(--secondary-color);
+      background: rgba(255, 255, 255, 0.07);
+      transform: translateX(-4px);
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 0;
+      background: var(--secondary-color);
+      transition: width 0.28s ease;
+      margin-top: 6px;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+.drawer__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1100;
+  transition: opacity 0.3s ease, backdrop-filter 0.3s ease;
+  backdrop-filter: blur(0px);
+
+  &.open {
+    opacity: 1;
+    pointer-events: auto;
+    backdrop-filter: blur(2px);
+  }
+}

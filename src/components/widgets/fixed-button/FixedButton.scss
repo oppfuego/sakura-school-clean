@@ -1,0 +1,16 @@
+.fixed-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #e86c8d;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 6px 18px rgba(232, 108, 141, 0.3);
+  transition: all 0.3s ease;
+}

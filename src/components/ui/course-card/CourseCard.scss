@@ -1,0 +1,165 @@
+.course-card {
+  background: linear-gradient(180deg, #fff8ec 0%, var(--background) 100%);
+  border-radius: 1.4rem;
+  overflow: hidden;
+  border: 2px solid var(--accent-pink);
+  box-shadow: 0 6px 18px rgba(67, 91, 113, 0.18);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  height: 100%; /* 🔹 важливо — усі картки мають однакову висоту */
+  font-family: var(--font-noto);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6px;
+    width: 100%;
+    background: var(--secondary-color);
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 30px rgba(67, 91, 113, 0.25);
+    border-color: var(--secondary-color);
+  }
+
+  &__image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    background: var(--background-secondary);
+    flex-shrink: 0;
+
+    @media (max-width: 768px) {
+      height: 200px;
+    }
+
+    .course-card__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease, filter 0.6s ease;
+      object-position: top;
+
+      &:hover {
+        transform: scale(1.06);
+        filter: brightness(1.05);
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+                      rgba(255, 255, 255, 0) 0%,
+                      rgba(251, 235, 196, 0.35) 100%
+      );
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+
+  /* 🔸 Контентна частина */
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 🔹 тримає кнопку внизу */
+    flex-grow: 1;
+    gap: 1.2rem;
+    background: linear-gradient(180deg, #fff9f2 0%, #fff2df 100%);
+    padding: 2rem 1.8rem 2.4rem;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* 🔹 усі відступи через gap */
+  }
+
+  &__title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    letter-spacing: 0.6px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+
+  &__subtitle,
+  &__price {
+    font-size: 1.1rem;
+    color: var(--accent-blue);
+    line-height: 1.6;
+  }
+
+  &__price {
+    font-weight: 700;
+    color: var(--secondary-color);
+  }
+
+  &__description {
+    font-size: 0.98rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  &__button {
+    align-self: flex-start;
+    background: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.8rem;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(201, 90, 56, 0.25);
+    cursor: pointer;
+
+    &:hover {
+      background: var(--accent-green);
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(201, 90, 56, 0.35);
+    }
+
+    &:focus {
+      outline: 3px solid var(--accent-blue);
+      outline-offset: 3px;
+    }
+  }
+
+  /* 💠 Модифікований тип картки (розширений вигляд) */
+  &--extended {
+    .course-card__body {
+      gap: 1rem;
+    }
+
+    .course-card__info {
+      gap: 0.8rem;
+    }
+
+    .course-card__title {
+      font-size: 1.4rem;
+    }
+
+    .course-card__price {
+      font-size: 1.15rem;
+    }
+
+    .course-card__description {
+      font-size: 1rem;
+    }
+  }
+}

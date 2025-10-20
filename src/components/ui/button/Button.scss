@@ -1,0 +1,85 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.75em 1.6em;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+
+  &--rounded {
+    border-radius: 12px;
+  }
+
+  &--square {
+    border-radius: 0;
+  }
+
+  &--circle {
+    border-radius: 50%;
+    padding: 30px;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  &--outline {
+    background: transparent;
+  }
+
+
+  &--hover-scale:hover {
+    transform: scale(1.04);
+  }
+
+  &--hover-shadow:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  &--hover-color:hover {
+    filter: brightness(1.15);
+  }
+
+  &--hover-all:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    filter: brightness(1.15);
+  }
+
+  &--hover-none:hover {
+    transform: none;
+    box-shadow: none;
+    filter: none;
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+  }
+
+  &__icon-only {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+  }
+
+  &--icon-right {
+    flex-direction: row-reverse;
+  }
+
+  &--icon-only {
+    padding: 0.6em;
+  }
+}
