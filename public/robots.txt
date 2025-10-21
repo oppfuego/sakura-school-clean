@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.sakuralanguageschool.com/sitemap.xml
+Host: https://www.sakuralanguageschool.com
