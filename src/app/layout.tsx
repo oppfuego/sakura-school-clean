@@ -68,7 +68,7 @@ export const metadata: Metadata = {
         siteName: "Sakura Language School",
         images: [
             {
-                url: "https://www.sakuralanguageschool.com/og-image.svg",
+                url: "https://www.sakuralanguageschool.com/og-image.jpg",
                 width: 1200,
                 height: 630,
                 alt: "Sakura Language School — курси японської, китайської та корейської мов",
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
             "Sakura Language School — Курси японської, китайської та корейської мов",
         description:
             "Вивчай японську, китайську та корейську мови онлайн або офлайн. Заняття з викладачами та носіями мови, підготовка до міжнародних іспитів.",
-        images: ["https://www.sakuralanguageschool.com/og-image.svg"],
+        images: ["https://www.sakuralanguageschool.com/og-image.jpd"],
         creator: "@sakura_school",
     },
     icons: { icon: "/favicon.ico" },
