@@ -8,6 +8,7 @@ import {
     studyFormatsContent,
 } from "@/resources/content";
 import MissionSection from "@/components/features/mission-section/MissionSection";
+import ContactForm from "@/components/widgets/contact-form/ContactForm";
 
 export default function Home() {
     return (
@@ -39,6 +40,7 @@ export default function Home() {
                 id="formats"
             />
             <FAQ id="faq"/>
+            <ContactForm/>
         </>
     );
 }

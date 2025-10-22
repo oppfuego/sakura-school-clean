@@ -1,4 +1,4 @@
-// src/components/widgets/contact-form/ContactForm.tsx
+'use client'
 import React, { useState } from "react";
 import { FaMapMarkerAlt, FaEnvelope, FaPhone } from "react-icons/fa";
 import { contactContent } from "@/resources/content";
