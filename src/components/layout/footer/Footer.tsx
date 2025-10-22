@@ -9,7 +9,7 @@ const Footer = () => {
 
             <div className="footer__socials">
                 <a
-                    href="https://www.instagram.com/"
+                    href="https://www.instagram.com/sakura.language.school?igsh=aDVtdGluazRvcXFp&utm_source=qr"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
@@ -18,31 +18,13 @@ const Footer = () => {
                     <FaInstagram/>
                 </a>
                 <a
-                    href="https://www.facebook.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Facebook"
-                    className="footer__icon"
-                >
-                    <FaFacebookF/>
-                </a>
-                <a
-                    href="https://t.me/"
+                    href="https://t.me/+351912575693"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Telegram"
                     className="footer__icon"
                 >
                     <FaTelegramPlane/>
-                </a>
-                <a
-                    href="https://www.tiktok.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="TikTok"
-                    className="footer__icon"
-                >
-                    <FaTiktok/>
                 </a>
             </div>
 
