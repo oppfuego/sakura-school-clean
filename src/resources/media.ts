@@ -12,6 +12,7 @@ export const media = {
     sakuraIcon: "/assets/images/sakura-icon.png",
     bookIcon: "/assets/images/book-icon.png",
     teacherIcon: "/assets/images/teacher-icon.png",
+    photo1: "/assets/images/photo1.jpg",
 
     chinaStudent: "/assets/images/china-student.jpg",
     japanStudent: "/assets/images/japan-student.svg",

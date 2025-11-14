@@ -7,7 +7,6 @@ import Button from "@/components/ui/button/Button";
 
 const ContactForm = () => {
     const { info, form } = contactContent;
-
     const [loading, setLoading] = useState(false);
     const [sent, setSent] = useState(false);
     const [error, setError] = useState<string | null>(null);
